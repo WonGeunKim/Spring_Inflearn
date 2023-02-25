@@ -4,10 +4,12 @@ import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
 
     // MemberService에서 사용하는 MemoryMemberRepository와 테스트케이스에서 사용하는 MemoryMemberRepository가 서로 다른 repository
